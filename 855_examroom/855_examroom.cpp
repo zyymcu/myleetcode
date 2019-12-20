@@ -15,6 +15,10 @@ public:
 	}
 
 	int seat() {
+		if (s.size() == 0) {
+			s.insert(0);
+			return 0;
+		}
 		int dist = *s.begin(), pre = -1, student = 0;
 		if (s.size() > 0) {
 			for (auto i : s) {
